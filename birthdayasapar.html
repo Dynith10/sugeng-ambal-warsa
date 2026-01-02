@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy ulang year</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #daecff;
+            padding: 20px;
+        }
+        h1 {
+            color: #black;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉Happy Birthday Wok🎉</h1>
+    <video controls autoplay muted>
+        <source src="sapbirthday.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video tag.
+    </video>
+    <div class="message">
+        <p>Wish you all the best sebesar pembukaan 600.000 lahan sawit 🎊😍😘🥳🤗🤤😻😽😺🙌🏻👏🏻🕺🏻 (yaudah si kalo garing orang gua bikinnya juga pas lagi rame ramenya, masi mending gua sempetin bikinin pas lagi setengah waras ngadepin tka gini)</p>
+    </div>
+    <script>
+        // Opsional: Auto-play musik latar (ganti dengan URL audio kamu)
+        const audio = new Audio('[AUDIO_URL]');
+        audio.play();
+    </script>
+      <p id="loading">Loading...</p>
+       <style>
+#loading {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+#foto {
+  max-width: 90%;
+  height: auto;
+  display: none;
+}
+      </style>
+      <img id="foto" src="yutafam.png" style="display:none;">
+      <script>
+setTimeout(() => {
+  loading.style.display = "none";
+  foto.style.display = "block";
+}, 27000);
+       </script>
+
+       <script>
+  setTimeout(() => {
+    document.getElementById("foto").style.display = "block";
+  }, 27000);
+       </script>
+       <style>.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle at 30% 30%, #FFFFFF, #89CFF0); /* Variasi warna */
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: float 10s linear infinite;
+    opacity: 0.8;
+}
+.balloon::before {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background: #333;
+}
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-120vh); }
+}
+        </style>
+        <script>// Fungsi untuk membuat balon dengan warna acak
+function createBalloon() {
+    const balloon = document.createElement('div');
+    balloon.className = 'balloon';
+    balloon.style.left = Math.random() * 100 + 'vw'; // Posisi horizontal acak
+    balloon.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Durasi acak 5-10s
+    
+    // Variasi warna: baby blue, putih, biru muda, dll.
+    const colors = ['#89CFF0', '#FFFFFF', '#ADD8E6', '#87CEEB', '#B0E0E6'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    balloon.style.background = `radial-gradient(circle at 30% 30%, #FFFFFF, ${randomColor})`;
+    
+    document.body.appendChild(balloon);
+    
+    // Hapus balon setelah animasi selesai
+    setTimeout(() => {
+        balloon.remove();
+    }, 10000);
+}
+
+// Buat balon baru setiap 1-3 detik
+setInterval(createBalloon, Math.random() * 2000 + 1000);
+
+// Mulai dengan beberapa balon
+for (let i = 0; i < 10; i++) {
+    setTimeout(createBalloon, i * 500);
+}
+       </script>
+       <style>.confetti {
+    position: fixed;
+    top: -10px;
+    width: 8px;
+    height: 12px;
+    opacity: 0.9;
+    animation: fall linear forwards;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+       </style>
+       <script>function createConfetti() {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+
+    // posisi horizontal acak
+    confetti.style.left = Math.random() * 100 + 'vw';
+
+    // ukuran acak
+    const size = Math.random() * 6 + 4;
+    confetti.style.width = size + 'px';
+    confetti.style.height = size * 1.5 + 'px';
+
+    // durasi jatuh acak
+    confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
+
+    // warna baby blue theme
+    const colors = ['#89CFF0', '#ADD8E6', '#B0E0E6', '#FFFFFF', '#87CEEB', '#FFC2D1'];
+    confetti.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+    // 🔥 BONUS: muter + miring acak
+    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+    document.body.appendChild(confetti);
+
+    // hapus setelah jatuh
+    setTimeout(() => {
+        confetti.remove();
+    }, 7000);
+}
+
+// confetti jalan terus
+setInterval(createConfetti, 150);
+       </script>
+</body>
+</html>
